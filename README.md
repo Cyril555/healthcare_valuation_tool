@@ -34,4 +34,4 @@ Python, Streamlit, Plotly, yfinance, pandas, numpy
 Author
 
 Cyril
-LSE Global Master in Management | Former NHS Doctor | Healthcare Tech
+
