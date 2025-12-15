@@ -169,7 +169,7 @@ with tab2:
         comp_data = comps.fetch_comparables()
         comp_results = comps.calculate_valuation()
     
-    if not comp_data.empty:
+    if not comp_data.empty and "Error" not in comp_results:
         st.subheader("Public Healthcare Tech Comparables")
         st.dataframe(comp_data.style.format({
             "Market Cap ($M)": "${:,.0f}",
@@ -200,7 +200,7 @@ with tab2:
         )
         st.plotly_chart(fig, use_container_width=True)
     else:
-        st.warning("Could not fetch comparable company data. Check your internet connection.")
+        st.warning("Could not fetch comparable company data. Yahoo Finance may be temporarily unavailable.")
 
 # --- TAB 3: VC METHOD ---
 with tab3:
