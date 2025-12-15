@@ -183,6 +183,18 @@ class ComparableCompanyAnalysis:
         if self.comparables is None:
             self.fetch_comparables()
         
+        if self.comparables.empty or "EV/Revenue" not in self.comparables.columns:
+            return {
+                "Median EV/Revenue Multiple": None,
+                "25th Percentile Multiple": None,
+                "75th Percentile Multiple": None,
+                "Growth Adjustment Factor": None,
+                "Implied EV - Low ($M)": None,
+                "Implied EV - Mid ($M)": None,
+                "Implied EV - High ($M)": None,
+                "Error": "Could not fetch comparable company data"
+            }
+        
         multiples = self.comparables["EV/Revenue"].dropna()
         
         median_multiple = multiples.median()
