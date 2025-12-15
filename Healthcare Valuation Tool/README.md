@@ -30,7 +30,8 @@ The sensitivity analysis tab shows how valuations change when you adjust key ass
 Built With
 
 Python, Streamlit, Plotly, yfinance, pandas, numpy
-Author
 
+/n
+Author
 Cyril
 LSE Global Master in Management | Former NHS Doctor | Healthcare Tech
