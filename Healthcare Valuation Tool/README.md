@@ -31,7 +31,7 @@ Built With
 
 Python, Streamlit, Plotly, yfinance, pandas, numpy
 
-/n
+
 Author
 Cyril
 LSE Global Master in Management | Former NHS Doctor | Healthcare Tech
